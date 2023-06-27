@@ -19,26 +19,26 @@ export async function POST(request:NextRequest) {
   const req = await request.json();
   
   const uId = uuid();
-  const setUserCookies = cookies();
+  // const setUserCookies = cookies();
   const userId = cookies().get("user_id")
 
   if (!userId) {
-    setUserCookies.set("user_id",uId);   
+    cookies().set("user_id",uId);   
   }
   
   try {
         const res = await db.insert(cartTable).values({
-         id:req.id,
+        //  id:req.id,
          user_id: cookies().get("user_id")?.value as string,
          product_id: req.product_id,
          product_qty : 1,
-         product_price : 1745
+         product_price : 3999
         }).returning();
 
         return NextResponse.json({res});
 
   } catch (err) {
-     console.log(err)
-     return NextResponse.json({message:"Error in Cart Post Request."});
+     console.log("Cart Error "+err)
+     return NextResponse.json({message:"Error in Porduct Cart Post Request."});
   }
 }

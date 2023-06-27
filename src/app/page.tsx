@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {client} from "../lib/sanityClient"
 import { Image as IImage} from 'sanity';
 import { urlForImage } from '../../sanity/lib/image';
+import { AddToCart } from '@/components/AddToCart';
 
 interface IProduct  {
     title:string,
@@ -36,19 +37,12 @@ export const getProducts = async ()=> {
 }
 export default async function Home() {
     const data = await getProducts();
-    console.log(data)
+    //console.log(data)
     return (
       <div className='grid grid-cols-[auto,auto,auto] justify-center gap-x-10'>
-          {data.map((item)=>(
+          {data.map((item,key=item.price)=>(
            <div>
-              <Image 
-                width={200}
-                height={200}
-                className='max-h-[200px] object-cover object-bottom'
-                src={urlForImage(item.image).url()} alt="Product"/>
-                <h1>{item.title}</h1>
-                <h3>${item.price}</h3>
-                <button className='bg-black text-white py-2 w-32 rounded-md '>Add To Cart</button>
+            <AddToCart item={item}/>
            </div>
                
           ))}
