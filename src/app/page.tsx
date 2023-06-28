@@ -44,7 +44,6 @@ export default async function Home() {
            <div>
             <AddToCart item={item}/>
            </div>
-               
           ))}
       </div>  
       
