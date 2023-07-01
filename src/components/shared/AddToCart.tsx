@@ -1,7 +1,7 @@
 "use client"
 import React, { FC } from 'react'
 import { Image as IImage} from 'sanity';
-import { urlForImage } from '../../sanity/lib/image';
+import { urlForImage } from '../../../sanity/lib/image';
 import Image from 'next/image'
 
 export const AddToCart: FC<{ item:any }> = ({ item })=> {
