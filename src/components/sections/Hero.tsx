@@ -24,11 +24,19 @@ const Hero = () => {
                     <ShoppingCart size={21} />
                     <p className="whitespace-pre font-bold">{btnLabel}</p>
                 </button>
-                <div className="flex-row sm:flex flex-shrink-0 gap-x-4 mt-10 w-full">
-                    <Image className="flex-shrink-0" src={Bazar} alt="Bazar" />
-                    <Image className="flex-shrink-0" src={Bustle} alt="Bustle" />
-                    <Image className="flex-shrink-0" src={Versace} alt="Versace" />
-                    <Image className="flex-shrink-0" src={Instyle} alt="In Style" />
+                <div className="grid grid-cols-2 sm:flex flex-shrink-0 gap-x-4 mt-10 w-full">
+                    <div className="flex-shrink-0">
+                        <Image src={Bazar} alt="Bazar" />
+                    </div>
+                    <div className="flex-shrink-0">
+                        <Image src={Bustle} alt="Bustle" />
+                    </div>
+                    <div className="flex-shrink-0">
+                        <Image src={Versace} alt="Versace" />
+                    </div>
+                    <div className="flex-shrink-0">
+                        <Image src={Instyle} alt="In Style" />
+                    </div>
                 </div>
             </div>
             {/* Right Side of a Hero Section */}

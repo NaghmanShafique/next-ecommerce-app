@@ -4,6 +4,7 @@ import { Image as IImage } from 'sanity';
 import { urlForImage } from '../../sanity/lib/image';
 import { AddToCart } from '@/components/shared/AddToCart';
 import Hero from '@/components/sections/Hero';
+import Promotions from '@/components/sections/Promotions';
 
 interface IProduct {
     title: string,
@@ -42,6 +43,7 @@ export default async function Home() {
     return (
         <>
             <Hero />
+            <Promotions/>
             <div className='grid grid-cols-[auto,auto,auto] justify-center gap-x-10 mt-5'>
                 {data.map((item, key = item.price) => (
                     <div>
