@@ -11,23 +11,21 @@ interface IProduct {
     description: string,
     _id: string,
     price: number,
-    image: IImage,
+   image: IImage,
     category: {
         name: string
     },
     subcategory: {
         name: string
     }
-
-
 }
 export const getProducts = async () => {
-    const result: IProduct[] = await client.fetch(`*[_type=="product"]{
+    const result:IProduct[] = await client.fetch(`*[_type=="product"]{
     title,
     description,
     _id,
     price,
-    image,
+   image,
     category -> {
         name
     },
@@ -38,15 +36,15 @@ export const getProducts = async () => {
     return result;
 }
 export default async function Home() {
-    const data = await getProducts();
+    const data:IProduct[] = await getProducts();
     //console.log(data)
     return (
         <>
             <Hero />
             <Promotions/>
             <div className='grid grid-cols-[auto,auto,auto] justify-center gap-x-10 mt-5'>
-                {data.map((item, key = item.price) => (
-                    <div>
+                {data.map((item, index:number) => (
+                    <div key={index}>
                         <AddToCart item={item} />
                     </div>
                 ))}
