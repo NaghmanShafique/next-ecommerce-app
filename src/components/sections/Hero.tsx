@@ -10,7 +10,7 @@ const Hero = () => {
     const btnLabel = "Start\n Shopping"
     const heroText = "An Industrial\nTake On\nStreewear"
     return (
-        <div className="flex justify-between items-center mt-10 max-w-[1440px] mx-20">
+        <div className="flex justify-between items-center mt-10 max-w-[1440px] mx-8">
             {/* Left Side of a Hero Section */}
             <div className="max-w-[720]">
                 <button className="rounded-md bg-blue-200 text-blue-700 font-bold w-28 px-4 py-2">Sale 70%</button>

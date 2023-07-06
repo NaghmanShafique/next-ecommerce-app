@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isNavbarOpen, setNavbarOpen] = useState<boolean>(false);
     return (
         <nav className="sticky top-0 z-10 backdrop-blur-lg bg-[#ffffffba]">
-            <div className="flex h-10 items-center justify-between px-20 max-w-[1440px]">
+            <div className="flex h-10 items-center justify-between px-6 max-w-[1440px]">
                 <div className="flex-shrink-0 w-40">
                     <Image src={"/Logo.webp"} alt="Logo" width={150} height={150} />
                 </div>

@@ -5,14 +5,14 @@ import PromoBoy2 from "@/components/assets/images/promoboy2.webp"
 
 const Promotions = () => {
    return (
-      <div className="mt-10 max-w-[1440px] mx-20">
-         <div className="max-w=[1440] mt-10 text-center">
+      <div className="mt-10 max-w-[1440px] mx-8">
+         <div className="max-w=[1440] mt-10 text-center py-">
             <p className="text-lg font-semibold text-blue-600">PROMOTIONS</p>
             <h4 className="text-3xl font-bold text-gray-800">Our Promotions Events</h4>
          </div>
-         <div className="my-4">
-            <div className="grid grid-cols-4 gap-5">
-               <div className="flex justify-evenly items-center bg-[#d6d6d8] col-span-2">
+         <div className="my-5 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+               <div className="flex flex-col items-center w-full md:flex-row justify-center bg-[#d6d6d8] col-span-1 md:col-span-2">
                   <div className="max-w-[10rem] my-2 mx-8">
                      <h4 className="text-3xl font-semibold px-1">
                         GET UP TO <span className="text-4xl font-semibold">60%</span>
@@ -21,29 +21,29 @@ const Promotions = () => {
                         For the summer season
                      </p>
                   </div>
-                  <div>
+                  <div className="flex-shrink-0">
                      <Image src={PromoGirl} alt={"Promo Girl"} width={240} />
                   </div>
                </div>
-               <div className="bg-[#efe1c7] w-full h-full row-span-2">
+               <div className="bg-[#efe1c7] w-full h-full row-span-1 md:row-span-2">
                   <div className="pt-6 px-6">
-                     <p>Flex Sweetshirt</p>
+                     <p >Flex Sweetshirt</p>
                      <p><s>$100.00</s>&nbsp;&nbsp;<span className="text-xl font-semibold">$75.00</span></p>
                   </div>
-                  <div>
+                  <div className="flex justify-center items-center">
                      <Image src={PromoBoy} alt={"Promo Boy"} width={240} />
                   </div>
                </div>
-               <div className="bg-[#d7d7d9] w-full h-full row-span-2 ">
+               <div className="bg-[#d7d7d9] w-full h-full row-span-1 md:row-span-2 ">
                   <div className="pt-6 px-6">
                      <p>Flex Push Button Bomber</p>
                      <p><s>$1225.00</s>&nbsp;&nbsp;<span className="text-xl font-semibold">$190.00</span> </p>
                   </div>
-                  <div>
+                  <div className="flex justify-center items-center">
                      <Image src={PromoBoy2} alt={"Promo Boy-2"} width={240} />
                   </div>
                </div>
-               <div className="bg-[#212121] w-full h-44 col-span-2">
+               <div className="bg-[#212121] w-full h-44 col-auto md:col-span-2">
                   <div className="text-white text-center mt-9">
                      <h2 className="text-4xl font-bold">Get 30% off</h2>
                      <p className="text-sm font-medium mt-5">USE PROMO CODE</p>
