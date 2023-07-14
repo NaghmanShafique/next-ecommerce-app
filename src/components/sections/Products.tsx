@@ -8,7 +8,7 @@ const Products :FC<{ProductData :singleProductType[]}>= ({ProductData}) => {
     <div className='flex'>
         {
             ProductData.map((item:singleProductType,index:number) => (
-              <ItemCard ItemData={item}/>
+              <ItemCard key={item._id} ItemData={item}/>
             )
         )}
     </div>
