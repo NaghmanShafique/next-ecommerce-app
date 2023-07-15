@@ -22,9 +22,9 @@ export const ItemCard: FC<{ ItemData:singleProductType }> = ({ ItemData })=> {
   return (
     <div>
         <Image 
-                width={200}
-                height={200}
-                className='max-h-[200px] object-cover object-bottom'
+                width={400}
+                height={400}
+                className='max-h-[400px] object-cover object-bottom'
                 src={urlForImage(ItemData.image).url()} alt="Product"/>
                 <h1>{ItemData.title}</h1>
                 <h3>${ItemData.price}</h3>

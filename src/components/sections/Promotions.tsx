@@ -6,7 +6,7 @@ import PromoBoy2 from "@/components/assets/images/promoboy2.webp"
 const Promotions = () => {
    return (
       <div className="mt-10 max-w-[1440px] mx-8">
-         <div className="max-w=[1440] mt-10 text-center py-">
+         <div className="max-w=[1440] mt-10 text-center py-1">
             <p className="text-lg font-semibold text-blue-600">PROMOTIONS</p>
             <h4 className="text-3xl font-bold text-gray-800">Our Promotions Events</h4>
          </div>
