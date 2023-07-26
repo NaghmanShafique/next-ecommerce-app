@@ -8,8 +8,11 @@ import Promotions from '@/components/sections/Promotions';
 import { NextResponse } from 'next/server';
 import Products from '@/components/sections/Products';
 import { singleProductType } from '@/components/utils/ProductsDataTypes';
+import Jewllery from '@/components/sections/Jewllery';
+import NewsLetter from '@/components/sections/NewsLetter';
 
-export const getProducts = async () => {
+
+const getProducts = async () => {
     const result:singleProductType[] = await client.fetch(`*[_type=="product"]{
     title,
     description,
@@ -28,12 +31,15 @@ export const getProducts = async () => {
 
 export default async function Home() {
     const res:singleProductType[] = await getProducts();
-    console.log("My Product " +res)
+    console.log("My Product 3" ,res)
+
     return (
         <>
             <Hero />
             <Promotions/>
             <Products ProductData={res}/>
+            <Jewllery/>
+            <NewsLetter/>
             {/* <div className='grid grid-cols-[auto,auto,auto] justify-center gap-x-10 mt-5'>
                 {res.map((item, index:number) => (
                     <div key={index}>

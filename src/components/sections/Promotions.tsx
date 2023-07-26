@@ -1,5 +1,5 @@
 import Image from "next/image"
-import PromoGirl from "@/components/assets/images/PromoGirl.webp"
+import PromoGirl from "@/components/assets/images/promogirl.webp"
 import PromoBoy from "@/components/assets/images/promoboy.webp"
 import PromoBoy2 from "@/components/assets/images/promoboy2.webp"
 
