@@ -3,6 +3,7 @@ import React from 'react'
 import Twitter from "../assets/images/twitter-com.png"
 import FaceBook from "../assets/images/facebook-com.png"
 import LinkedIn from "../assets/images/linkedin-com.png"
+import GitHub from "../assets/images/github.png"
 
 const Footer = () => {
     return (
@@ -24,23 +25,23 @@ const Footer = () => {
 
 
                     <p className="mt-8 text-base text-gray-700 text-left">Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
-                  <div className='flex gap-4 mt-10'>
-                    
+                    <div className='flex gap-4 mt-10'>
+
                         <div className='bg-gray-100 w-12 h-12 rounded-lg flex justify-center items-center'>
-                            <Image width={30} height={30} src={Twitter} alt="Twitter"/>
-                         </div>
-                    
-                         <div className='bg-gray-100 w-12 h-12 rounded-lg flex justify-center items-center f'>
-                       <Image width={26}  src={FaceBook} alt="FaceBook"/>
-                       </div>
-                       
-                    
-                       <div className='bg-gray-100 w-12 rounded-lg flex justify-center items-center'>
-                     <Image width={40} src={LinkedIn} alt="LinkedIn"/>
-                     </div>
-                       
-                    
-                  </div>
+                            <Image width={30} height={30} src={Twitter} alt="Twitter" />
+                        </div>
+
+                        <div className='bg-gray-100 w-12 h-12 rounded-lg flex justify-center items-center f'>
+                            <Image width={26} src={FaceBook} alt="FaceBook" />
+                        </div>
+
+
+                        <div className='bg-gray-100 w-12 rounded-lg flex justify-center items-center'>
+                            <Image width={40} src={LinkedIn} alt="LinkedIn" />
+                        </div>
+
+
+                    </div>
                 </div>
                 <div className="flex flex-col flex-grow md:flex-row justify-between md:pl-20 -mb-10 md:mt-0 mt-10 text-left md:text-center">
                     <div className="px-10">
@@ -122,6 +123,27 @@ const Footer = () => {
                     </span>
                 </div>
             </div> */}
+            <div>
+                <div className='bg-gray-200 w-full h-1'>
+
+                </div>
+                <div className='flex flex-col justify-start md:justify-around md:flex-row md:flex-wrap'>
+                   <div className='py-4'>
+                      <p className='w-full md:max-w-[8rem] shrink-0'>Copyright © 2022 Dine Market</p>
+                   </div>
+                   <div className='py-4'>
+                      <p className='w-full md:max-w-[14rem] shrink-0'>Design by. <span className='text-lg font-bold'>Naghman Shafeeque</span></p>
+                   </div>
+                   <div className='py-4'>
+                      <p className='w-full md:max-w-[15rem] shrink-0'>Code by. <span className='text-lg font-bold'>NaghmanShafique on github</span></p>
+                      <div>
+                      {/* <Image width={40} src={GitHub} alt="GitHub" /> */}
+                      </div>
+                      
+                   </div>
+                  
+                </div>
+            </div>
         </footer>
     )
 }
