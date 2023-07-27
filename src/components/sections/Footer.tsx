@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
+import Twitter from "../assets/images/twitter-com.png"
+import FaceBook from "../assets/images/facebook-com.png"
+import LinkedIn from "../assets/images/linkedin-com.png"
 
 const Footer = () => {
     return (
-        <footer className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-                <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <footer className="text-gray-600 body-font max-w-[1440px] mx-8">
+            <div className="container px-5 py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+                <div className="w-72 flex-shrink-0 md:mx-0 mx-8 text-left md:text-center">
                     {/* <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"> */}
                     {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -13,57 +16,74 @@ const Footer = () => {
                         <span className="ml-3 text-xl">Tailblocks</span> */}
                     {/* </a> */}
 
-                    <a className='flex items-center md:justify-start justify-center text-gray-800'>
+                    <a className='flex items-center justify-start  text-gray-800'>
                         <div>
                             <Image src={"/Logo.webp"} alt="Logo" width={150} height={150} />
                         </div>
                     </a>
 
 
-                    <p className="mt-2 text-sm text-gray-500">Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
+                    <p className="mt-8 text-base text-gray-700 text-left">Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
+                  <div className='flex gap-4 mt-10'>
+                    
+                        <div className='bg-gray-100 w-12 h-12 rounded-lg flex justify-center items-center'>
+                            <Image width={30} height={30} src={Twitter} alt="Twitter"/>
+                         </div>
+                    
+                         <div className='bg-gray-100 w-12 h-12 rounded-lg flex justify-center items-center f'>
+                       <Image width={26}  src={FaceBook} alt="FaceBook"/>
+                       </div>
+                       
+                    
+                       <div className='bg-gray-100 w-12 rounded-lg flex justify-center items-center'>
+                     <Image width={40} src={LinkedIn} alt="LinkedIn"/>
+                     </div>
+                       
+                    
+                  </div>
                 </div>
-                <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Company</h2>
-                        <nav className="list-none mb-10">
-                            <li>
+                <div className="flex flex-col flex-grow md:flex-row justify-between md:pl-20 -mb-10 md:mt-0 mt-10 text-left md:text-center">
+                    <div className="px-10">
+                        <h2 className="text-2xl font-bold text-gray-500 mb-3">Company</h2>
+                        <nav className="list-none mb-10 text-lg">
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">About</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Term of Policy</a>
                             </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">privacy Policy</a>
+                            <li className='mb-2'>
+                                <a className="text-gray-600 hover:text-gray-800">Privacy Policy</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">How it works</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
                             </li>
                         </nav>
                     </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Support</h2>
-                        <nav className="list-none mb-10">
-                            <li>
+                    <div className="px-10">
+                        <h2 className="text-2xl font-bold text-gray-500 mb-3">Support</h2>
+                        <nav className="list-none mb-10 text-lg">
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Support Carrer</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">24h Service</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Quick Chat</a>
                             </li>
                         </nav>
                     </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Contact</h2>
-                        <nav className="list-none mb-10">
-                            <li>
+                    <div className="px-10">
+                        <h2 className="text-2xl font-bold text-gray-500 mb-3">Contact</h2>
+                        <nav className="list-none mb-10 text-lg">
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Whatsapp</a>
                             </li>
-                            <li>
+                            <li className='mb-2'>
                                 <a className="text-gray-600 hover:text-gray-800">Support 24h</a>
                             </li>
                         </nav>
