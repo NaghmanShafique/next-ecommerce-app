@@ -17,22 +17,14 @@ const Products = async () => {
   //var { productArray } = productData
   console.log("data array Products " + productData.productArray[0].title)
 
-  {
-    if (productData.productArray[0].title === "Product Not Found") {
-      return (
-        <div>
-
-        </div>
-      )
-    } else {
-      return (
+        return (
         <div>
           <AllProducts productData={productData} />
         </div>
 
       )
-    }
-  }
+    
+  
 }
 
 export default Products
