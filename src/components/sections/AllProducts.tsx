@@ -7,14 +7,14 @@ interface propsType {
     productArray :  Array<singleProductType>
 }
 export default class AllProducts extends Component<{productData : propsType}> {
-   getData = ()=> {
-    console.log("Array Value "+this.props.productData.productArray.length);
+//    getData = ()=> {
+//     console.log("Array Value "+this.props.productData.productArray.length);
     
-   }
+//    }
     render(){
        return(
             // <div onClick={this.getData}>{this.props.productData.productArray[0].description}</div>
-                <div onClick={this.getData} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 py-10 max-w-[1440px] mx-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 py-10 max-w-[1440px] mx-8">
                     
                     {
                       
