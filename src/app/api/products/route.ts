@@ -38,13 +38,16 @@ export async function GET(request:NextRequest) {
            }`,{type});
             // console.log("API data "+result)
             productData.push(...result)
-
+            console.log("Product API DATA "+result)
             if(param.has("start") && param.has("end")) {
+                console.log("In Has"+param.get("start"))
                  if(productData[Number(param.get("start"))]) {
+                    console.log("In Start")
                     const productArray =  productData.slice(Number(param.get("start")) , Number(param.get("end")))
+                    console.log("Product Array "+productArray[0].description)
                     return NextResponse.json({productArray});
                  } 
-                 return NextResponse.json({productArray : "Not Found"});   
+                 return NextResponse.json({productArray : "Naghman Not Found"});   
             }
             
             return NextResponse.json({productArray : productData});
