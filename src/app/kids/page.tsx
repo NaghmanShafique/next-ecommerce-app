@@ -14,25 +14,13 @@ async function fetchAllProducts() {
 }
 const Kids = async () => {
   const productData = await fetchAllProducts();
-  //var { productArray } = productData
-  //console.log("data array Kids " + productData.productArray[1])
-
-  // {
-  //   if (productData.productArray[1] === undefined) {
-  //     return (
-  //       <div>
-          
-  //       </div>
-  //     )
-  //   } else {
       return (
         <div>
+          No Product
           {/* <AllProducts productData={productData} /> */}
         </div>
 
       )
-    //}
- // }
 }
 
 export default Kids

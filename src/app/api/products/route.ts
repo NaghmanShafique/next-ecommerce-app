@@ -44,7 +44,7 @@ export async function GET(request:NextRequest) {
                     const productArray =  productData.slice(Number(param.get("start")) , Number(param.get("end")))
                     return NextResponse.json({productArray});
                  } 
-                    return NextResponse.json({productArray : "Product Not Found"});  
+                 return NextResponse.json({productArray : "Not Found"});   
             }
             
             return NextResponse.json({productArray : productData});
