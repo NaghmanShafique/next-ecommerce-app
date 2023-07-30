@@ -19,7 +19,7 @@ export default class AllProducts extends Component<{productData : propsType}> {
                     {
                       
                       //console.log(this.props.productData.productArray.length()) 
-                        this.props.productData.productArray.map((item:singleProductType,index:number) => (
+                        this.props.productData?.productArray.map((item:singleProductType,index:number) => (
                             <ItemCard key={item._id} ItemData={item}/>
                           )
                       )
