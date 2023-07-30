@@ -17,22 +17,22 @@ const Kids = async () => {
   //var { productArray } = productData
   console.log("data array Kids " + productData.productArray[1])
 
-  {
-    if (productData.productArray[1] === undefined) {
-      return (
-        <div>
+  // {
+  //   if (productData.productArray[1] === undefined) {
+  //     return (
+  //       <div>
           
-        </div>
-      )
-    } else {
+  //       </div>
+  //     )
+  //   } else {
       return (
         <div>
-          <AllProducts productData={productData} />
+          {/* <AllProducts productData={productData} /> */}
         </div>
 
       )
-    }
-  }
+    //}
+ // }
 }
 
 export default Kids
