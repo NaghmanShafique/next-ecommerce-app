@@ -15,7 +15,7 @@ async function fetchAllProducts() {
 const Products = async () => {
   const productData = await fetchAllProducts();
   //var { productArray } = productData
-  console.log("data array Products " + productData.productArray[0].title)
+  //console.log("data array Products " + productData.productArray[0].title)
 
         return (
         <div>
