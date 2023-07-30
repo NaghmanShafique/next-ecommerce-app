@@ -14,13 +14,25 @@ async function fetchAllProducts() {
 }
 const Male = async () => {
   const productData = await fetchAllProducts();
-   //var { productArray } = productData
-   console.log("data array Male "+productData.productArray)
-    return (
-    <div>
-        <AllProducts productData = {productData}/>
-    </div>
-  )
+  //var { productArray } = productData
+  console.log("data array Male " + productData.productArray[0].title)
+
+  {
+    if (productData.productArray[0].title === "Product Not Found") {
+      return (
+        <div>
+
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <AllProducts productData={productData} />
+        </div>
+
+      )
+    }
+  }
 }
 
 export default Male
