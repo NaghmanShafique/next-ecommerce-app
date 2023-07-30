@@ -4,6 +4,7 @@ import Menu from "../shared/Menu"
 import { SearchIcon, ShoppingCartIcon ,MenuIcon ,X} from "lucide-react"
 import MobileMenu from "../subcomponents/MobileMenu"
 import { useState } from "react"
+import Link from "next/link"
 
 
 const Navbar = () => {
@@ -12,7 +13,9 @@ const Navbar = () => {
         <nav className="sticky top-0 z-10 backdrop-blur-lg bg-[#ffffffba]">
             <div className="flex h-10 items-center justify-between px-6 max-w-[1440px]">
                 <div className="flex-shrink-0 w-40">
+                    <Link href="/">
                     <Image src={"/Logo.webp"} alt="Logo" width={150} height={150} />
+                    </Link>
                 </div>
                 <div className="hidden lg:flex items-center justify-between gap-x-14 w-full ml-10">
                     <div>

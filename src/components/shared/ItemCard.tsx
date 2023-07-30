@@ -31,7 +31,7 @@ export const ItemCard: FC<{ ItemData: singleProductType }> = ({ ItemData }) => {
           src={urlForImage(ItemData.image).url()} alt="Product" />
         <h1>{ItemData.title}</h1>
         <h3>${ItemData.price}</h3>
-        <button onClick={() => addToCartHandler()} className='bg-black text-white py-2 w-32 rounded-md '>Add To Cart</button>
+        <button onClick={() => addToCartHandler()} className='bg-black text-white py-2 w-32 rounded-md mb-4'>Add To Cart</button>
       </div>
     </Link >
     </>

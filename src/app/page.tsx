@@ -12,6 +12,7 @@ import Jewllery from '@/components/sections/Jewllery';
 import NewsLetter from '@/components/sections/NewsLetter';
 
 
+
 const getProducts = async () => {
     const result:singleProductType[] = await client.fetch(`*[_type=="product"]{
     title,
@@ -31,7 +32,7 @@ const getProducts = async () => {
 
 export default async function Home() {
     const res:singleProductType[] = await getProducts();
-    console.log("My Product 3" ,res)
+    //console.log("My Product 3" ,res)
 
     return (
         <>
@@ -40,6 +41,7 @@ export default async function Home() {
             <Products ProductData={res}/>
             <Jewllery/>
             <NewsLetter/>
+            {/* <AllProducts/> */}
             {/* <div className='grid grid-cols-[auto,auto,auto] justify-center gap-x-10 mt-5'>
                 {res.map((item, index:number) => (
                     <div key={index}>
