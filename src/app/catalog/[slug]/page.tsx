@@ -1,9 +1,39 @@
 import React, { FC } from 'react'
+import { singleProductType } from '@/components/utils/ProductsDataTypes';
+import { fetchAllProducts } from '@/app/product/page';
+import Image from 'next/image';
+import { urlForImage } from '../../../../sanity/lib/image'
 
-const Catalog : FC<{params : {slug:string}}> = ({params}) => {
+interface propsType {
+  result: singleProductType[];
+}
+
+
+
+export default async function Catalog({ params }: { params: { slug: string } }) {
+  const productData: propsType = await fetchAllProducts();
+  //console.log("Product Route ", params.slug)
+
+  const oneProduct = productData.result.filter((item) => item.Slug.current === params.slug)
+  console.log("One Product Data", oneProduct)
   return (
-    <div>{params.slug}</div>
+    <>
+      {
+        oneProduct.map((item: singleProductType) => (
+          <div>
+            <div>
+              <Image
+                width={400}
+                height={400}
+                src={urlForImage(item.image).url()} alt="Product" />
+            </div>
+            <div>
+              Product Details
+            </div>
+          </div>
+        ))
+      }
+    </>
   )
 }
 
-export default Catalog

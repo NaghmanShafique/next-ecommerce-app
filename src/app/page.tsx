@@ -20,6 +20,7 @@ const getProducts = async () => {
     _id,
     price,
    image,
+   Slug,
     category -> {
         name
     },

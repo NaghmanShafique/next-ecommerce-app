@@ -6,23 +6,27 @@ import Image from 'next/image'
 import { singleProductType } from '../utils/ProductsDataTypes';
 import Link from 'next/link';
 
-export const ItemCard: FC<{ ItemData: singleProductType }> = ({ ItemData }) => {
+export const ItemCard: FC<{ ItemData: singleProductType}> = ({ ItemData }) => {
 
-  const addToCartHandler = async () => {
-    const res = await fetch('/api/cart', {
-      method: "POST",
-      body: JSON.stringify({
-        product_id: ItemData._id,
-      })
+  // const addToCartHandler = async () => {
+  //   const res = await fetch('/api/cart', {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       product_id: ItemData._id,
+  //     })
 
-    })
-    const result = await res.json();
-    console.log(result);
+  //   })
+  //   const result = await res.json();
+  //   console.log(result);
+  // }
+
+  const addToCartHandler = () => {
+    console.log("In Cart ",ItemData.Slug.current)
   }
 
   return (
     <>
-      <Link href={'/catalog/1'}>
+      <Link href={`/catalog/${ItemData.Slug.current}`}>
     <div>
         <Image
           width={400}
