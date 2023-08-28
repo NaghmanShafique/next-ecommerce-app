@@ -22,7 +22,7 @@ export default async function Catalog({ params }: { params: { slug: string } }) 
     <>
       {
         oneProduct.map((item: singleProductType) => (
-          <div className='mt-10 pb-10 max-w-[1440px] mx-8 bg-slate-50 flex-shrink-0'>
+          <div key={item._id} className='mt-10 pb-10 max-w-[1440px] mx-8 bg-slate-50 flex-shrink-0'>
             <div className='grid grid-cols-1 px-10 flex-shrink-0 md:grid-cols-1 lg:grid-cols-2 gap-4  '>
               {/* Image Div */}
               <div className='flex justify-center items-center flex-shrink-0 w-full h-full'>
@@ -44,8 +44,8 @@ export default async function Catalog({ params }: { params: { slug: string } }) 
                   <div className='flex gap-x-4'>
                     {
                       sizez.map((size) => (
-                        <div className='flex justify-center items-center w-7 h-7 mt-4 rounded-full hover:shadow-gray-400 hover:shadow-xl duration-300'>
-                          <span key={size} className='font-semibold text-gray-500'>{size}</span>
+                        <div key={size} className='flex justify-center items-center w-7 h-7 mt-4 rounded-full hover:shadow-gray-400 hover:shadow-xl duration-300'>
+                          <span className='font-semibold text-gray-500'>{size}</span>
                         </div>
                       ))
                     }
