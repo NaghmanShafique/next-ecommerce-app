@@ -19,21 +19,21 @@ const getProducts = async () => {
     description,
     _id,
     price,
-   image,
-   Slug,
-    category -> {
-        name
-    },
-    subcategory -> {
-        name
-    }
-   }`);
+    image,
+    Slug,
+     category -> {
+         name
+     },
+     subcategory -> {
+         name
+     }
+    }`);
     return result;
 } 
 
 export default async function Home() {
     const res:singleProductType[] = await getProducts();
-    //console.log("My Product 3" ,res)
+    console.log("My Product 3" ,res)
 
     return (
         <>

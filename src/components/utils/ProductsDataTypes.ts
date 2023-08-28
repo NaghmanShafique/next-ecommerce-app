@@ -23,3 +23,13 @@ export interface slugType {
     current: string,
 };
 
+export interface assetImageType {
+    _type: string,
+    _ref: string,
+};
+
+export interface imagesType {
+    asset : assetImageType,
+    _type : string,
+    _key  : string
+}
